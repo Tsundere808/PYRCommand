@@ -5,9 +5,9 @@
 package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
-import frc.robot.commands.Autos;
 import frc.robot.commands.*;
 import frc.robot.subsystems.ExamplePneumaticsSubsystem;
+import frc.robot.subsystems.ExampleSingleMotor;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
@@ -24,6 +24,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private XboxController xbox = new XboxController(0);
   public static ExamplePneumaticsSubsystem pTest = new ExamplePneumaticsSubsystem();
+  public static ExampleSingleMotor smotorSub = new ExampleSingleMotor();
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -43,6 +44,7 @@ public class RobotContainer {
   private void configureBindings() {
     new JoystickButton(xbox, 5).onTrue(new Pneumatics1(pTest));
 
+    new JoystickButton(xbox, 1).whileTrue(new SingleMotorJoystickCommand(smotorSub, () -> -xbox.getLeftY()));
   }
 
   /**
