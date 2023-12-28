@@ -42,7 +42,7 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    new JoystickButton(xbox, 5).onTrue(new Pneumatics1(pTest));
+    new JoystickButton(xbox, 4).onTrue(new Pneumatics1(pTest));
 
     new JoystickButton(xbox, 1).whileTrue(new SingleMotorJoystickCommand(smotorSub, () -> -xbox.getLeftY()));
   }

@@ -17,8 +17,8 @@ public class ExamplePneumaticsSubsystem extends SubsystemBase {
 
   // Class Variables
   private DoubleSolenoid pTest1;
-  private final int pTest1_FORWARD_CHANNEL = 0;
-  private final int pTest1_REVERSE_CHANNEL = 8;
+  private final int pTest1_FORWARD_CHANNEL = 3;
+  private final int pTest1_REVERSE_CHANNEL = 5;
   //Second One
   //private DoubleSolenoid pTest2;
   //private final int pTest2_FORWARD_CHANNEL = 1;

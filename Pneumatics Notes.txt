@@ -1,0 +1,10 @@
+Check List for Pneumatics Testing
+
+1. Check How many Pistons
+2. Check Wiring / Setup (Change values in Subsystem)
+    2A. Is it the pneumatics set up(Compressor?,Solenoids?,Module?)
+    2B. What Pneumatics Module are we using
+    2C. Which Ports
+3.Set Up Driver Station
+    3A. What controller are we using?
+    3B. What computer is the driver Station(check controller ports)
